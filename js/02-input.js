@@ -1,6 +1,6 @@
 /*
- * - Ввод пользовователя
- * - Методы window.confirm() и window.prompt()
+ * - Ввод користувача
+ * - Методи window.confirm() і window.prompt()
  */
 
 // const shouldRenew = confirm('Хотите продлить подписку?');
