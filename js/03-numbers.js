@@ -1,69 +1,54 @@
 /*
- * Парс числа с Number.parseInt() и Number.parseFloat()
+ * Парс числа з Number.parseInt() та Number.parseFloat()
  */
 
 let elementWidth = '50px';
-// elementWidth = Number.parseInt(elementWidth);
-// console.log('elementWidth: ', elementWidth);
+
 
 let elementHeight = '200.74px';
-// elementHeight = Number.parseFloat(elementHeight);
-// console.log('elementHeight: ', elementHeight);
 
 /*
  * - Метод число.toFixed(digits)
- * - Матрёшки на примере  console.log(Number(число.toFixed(digits)))
+ * - Матрьошки на пркладі console.log(Number(число.toFixed(digits)))
  */
 let salary = 1300.16472;
-// salary = Number(salary.toFixed(2));
 
-// console.log(salary);
 
 /*
- * - Приведение (преобразование) к числу с Number(value)
- * - Значение NaN (Not a Number) и метод Number.isNaN(value)
+ * - Приведення до числа з Number(value)
+ * - Значення NaN (Not a Number) і метод Number.isNaN(value)
  */
 let quantity = '30';
-let value = 'Эту строку невозможно привести к числу';
+let value = 'Цей рядок неможливо перетворити в число';
 
-// console.log(Number(quantity));
-// console.log(Number(value));
 
 /*
- * Обьект Math
- * - Возведение в степень
- * - Exponent operator
+ * Об'ект Math
+ * - Возведення в степінь
+ * - Exponent operator **
  */
 
 // const base = 2;
 // const power = 5;
 
-// const result = Math.pow(base, power);
-// console.log(base ** power);
 
 /*
- * Напиши скрипт который просит пользователя ввести число и степень,
- * возводит число в эту степень и выводит результат в консоль
+ * Напиши скрипт який просить у користувача ввести число і степінь,
+ * підводить число в цю степінь і виводить результат в консоль.
  */
 
-//  1. попросить ввести число и сохранить в переменную
-// let base = prompt('Давай число');
-// base = Number(base);
-// console.log(base);
+// Алгоритм рішення:
+// 1. попросити в користувача число і записати його в змінну
 
-//  2. попросить ввести степень и сохранить в переменную
+// 2. попросити в користувача степінь і записати її в змінну
 
-// let power = prompt('Давай степень');
-// power = Number(power);
-// console.log(power);
+// 3. вивести результат підведення числа в тепінь в консоль
 
-//  3. Возвести введенные данные в степень и вывести
-// const result = base ** power;
 
-// console.log(result);
+
 
 /*
- * Генерим псевдослучайные числа
+ * Генерим псевдовипадкові числа
  * - Math.random()
  * - Math.round()
  */

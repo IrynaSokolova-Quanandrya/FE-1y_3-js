@@ -1,52 +1,32 @@
 /*
- * Длина строки, свойство length
+ * Довжина рядка, влістивість length
  */
-const message = 'В этой строке 26 символов.';
-// console.log(message.length);
+const message = 'В цьому рядку 26 символів.';
 
 /*
- * Конкатенация строк
+ * Конкатенація рядків
  */
-const firstName = 'Chelsy';
-const lastName = 'Emerald';
-const fullName = firstName + ' ' + lastName;
-
-// console.log(fullName);
 
 /*
- * Напиши скрипт который выведет строку в формате:
- * «Гость x y поселяется в z номер q»,
- * подставив вместо x y z q значения переменных
+ * Напиши скрипт який виведе рядок в форматі:
+ * «Гість x y поселяється в g номер q»,
+ * підставив замість x y g q значення змінних
  */
 
 const room = 716;
 const type = 'VIP';
 
-// const welcomeMsg =
-//   'Гость ' +
-//   firstName +
-//   ' ' +
-//   lastName +
-//   ' поселяется в ' +
-//   type +
-//   ' номер ' +
-//   room;
-
-const welcomeMsg = `Гость ${firstName} ${lastName} поселяется в ${type} номер ${room}`;
-// console.log(welcomeMsg);
-
 /*
- * Шаблонные строки (template strings)
- * Возвращаемся к составлению строки поселения в отель
+ * Шаблонні рядки (template strings)
+ * Повертаємось до складання рядка поселення в готель
  */
 
 const quantity = 15;
-const orderMsg = `Вы заказываете ${quantity} холодильников.`;
+const orderMsg = `Ви замовляєте 15 тістечок.`;
 
-// console.log(orderMsg);
 
 /*
- * Нормализация с методом toLowerCase()
+ * Нормалізація з методом toLowerCase()
  */
 
 // let brand = prompt('Давай бренд');
@@ -54,31 +34,15 @@ const orderMsg = `Вы заказываете ${quantity} холодильник
 
 // console.log(brand);
 
-let brand = 'SamSUnG';
-// console.log(brand[4]);
-// console.log(brand.slice(1).toLowerCase());
-
-brand = brand[0] + brand.slice(1).toLowerCase();
-
-// console.log(brand);
 
 /*
- * Поиск в строке с методом includes()
+ * Пошук в рядку з методом includes()
  */
 const blacklistedWord1 = 'спам';
-const blacklistedWord2 = 'распродажа';
+const blacklistedWord2 = 'розпродаж';
 
-const string1 = 'Привет, я принц Абдул, это не спам, предлагаю тебе миллион!';
-const string2 = 'Самая большая РАСПРОДАЖА этой недели, не пропустите!';
-const string3 = 'Рекламная кампания #fatlivesmatter';
+const string1 = 'Привіт, я принц Абдул, це не спам, пропоную тобі мільйон!';
+const string2 = 'Найбільший РОЗПРОДАЖ цього тижня, не пропустіть!';
+const string3 = 'Рекламна кампанія #jsIsAwesome';
 
-console.log(string1.includes(blacklistedWord1));
-console.log(string1.includes(blacklistedWord2));
 
-console.log(string2.includes(blacklistedWord1));
-
-const normalizedString2 = string2.toLowerCase();
-console.log(normalizedString2.includes(blacklistedWord2));
-
-console.log(string3.includes(blacklistedWord1));
-console.log(string3.includes(blacklistedWord2));
