@@ -38,11 +38,11 @@ const orderMsg = `Ви замовляєте 15 тістечок.`;
 /*
  * Пошук в рядку з методом includes()
  */
-const blacklistedWord1 = 'спам';
-const blacklistedWord2 = 'розпродаж';
+// const blacklistedWord1 = 'спам';
+// const blacklistedWord2 = 'розпродаж';
 
-const string1 = 'Привіт, я принц Абдул, це не спам, пропоную тобі мільйон!';
-const string2 = 'Найбільший РОЗПРОДАЖ цього тижня, не пропустіть!';
-const string3 = 'Рекламна кампанія #jsIsAwesome';
+// const string1 = 'Привіт, я принц Абдул, це не спам, пропоную тобі мільйон!';
+// const string2 = 'Найбільший РОЗПРОДАЖ цього тижня, не пропустіть!';
+// const string3 = 'Рекламна кампанія #jsIsAwesome';
 
 

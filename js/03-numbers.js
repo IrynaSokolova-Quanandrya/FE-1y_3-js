@@ -38,27 +38,13 @@ let value = 'Цей рядок неможливо перетворити в чи
  */
 
 // Алгоритм рішення:
-// 1. попросити в користувача число і записати його в змінну
-
-// 2. попросити в користувача степінь і записати її в змінну
-
-// 3. вивести результат підведення числа в тепінь в консоль
-
-
-
 
 /*
  * Генерим псевдовипадкові числа
  * - Math.random()
  * - Math.round()
  */
-// Math.random() * (max - min) + min
-// const max = 80;
-// const min = 10;
 
-// const result = Math.round(Math.random() * (max - min) + min);
-
-// console.log(result);
 
 // const colors = ['tomato', 'teal', 'orange', 'deeppink', 'skyblue'];
 // const max = colors.length - 1;
