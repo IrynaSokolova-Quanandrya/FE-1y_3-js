@@ -24,10 +24,10 @@
 
 // console.log(result);
 
-const a = 5;
-const b = 10;
-const c = '5';
-const d = 'Hello!';
+// const a = 5;
+// const b = 10;
+// const c = '5';
+// const d = 'Hello!';
 
 
-console.log(a !== b);
+// console.log(a !== b);
