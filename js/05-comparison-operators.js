@@ -17,4 +17,10 @@
 
 // const isEqual = 1 === true;
 
-// console.log(isEqual);
+Boolean(1)//true
+Number(true)//1
+
+console.log(Boolean(1));
+console.log(Number(true));
+
+console.log(1 === true);
