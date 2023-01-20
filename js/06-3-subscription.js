@@ -8,6 +8,6 @@ const sub = 'free';
 
 // якщо користувач pro або користувач vip тоді є доступ
 
-const canAccessContent = sub === 'pro' || sub === 'vip';
+// const canAccessContent = ;
 
 console.log('Є доступ до контенту? ', canAccessContent);
