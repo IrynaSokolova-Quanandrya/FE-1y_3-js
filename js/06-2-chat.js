@@ -3,12 +3,13 @@
  * Для цього користувач повинен бути:
  * - другом
  * - онлайн
- * - без режима не турбувати
+ * - без режиму не турбувати
  */
 
 const isOnline = true;
 const isFriend = true;
 const isDnd = true;
 
-// const canOpenChat = ;
+const canOpenChat = isOnline && isFriend && !isDnd;
+// true && true && false
 console.log('Можна відкрити чат? ', canOpenChat);
