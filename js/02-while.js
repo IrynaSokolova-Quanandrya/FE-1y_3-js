@@ -1,19 +1,34 @@
 // Цикл while
 
-// while (вираз) {
-    // код, тіло циклу (statement)
-//   }
 
-let age = 0;
-// console.log(age);
-//   while (age <= 18) {
-//     age += 1
-//     console.log(age);
-// }
+for(let i = 0; i <= 5; i += 1){    
+    console.log(i);    
+}
+
+// console.log(prompt('ghghj'));
+
+// console.log(Number(null));
+let number;
+while (number !== 5) {
+    
+    if(number === 0){
+        console.log(number);
+        break;
+    }
+    number = Number(prompt('Введіть чисто 5'))
+
+    
+    console.log(number);    
+}
+
+
 
 // Цикл do...while
 
-// do {
-//     console.log(age);
-//     age += 1    
-//   } while (age <=18);
+let password = '';
+
+do {
+  password = prompt('Введіть пароль довше 4-х символів', '');
+} while (password.length < 5);
+
+console.log('Ввели пароль: ', password);
