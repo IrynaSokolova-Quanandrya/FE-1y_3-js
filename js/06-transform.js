@@ -9,11 +9,5 @@
 const friends = ['Mango', 'Poly', 'Kiwi', 'Ajax'];
 
 let string = '';
-console.log(friends.join(','));
 
-// for (const friend of friends) {
-//     string += friend + ',' 
-// }
-
-// console.log(string.split());
 // Повинно вийти 'Mango,Poly,Kiwi,Ajax'

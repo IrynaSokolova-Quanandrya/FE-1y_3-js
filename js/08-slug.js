@@ -11,14 +11,3 @@
 // Повинно вийти top-10-benefits-of-react-framework
 const title = 'Top 10 benefits of React framework';
 
-// const normalizedTitle = title.toLocaleLowerCase();
-// console.log(normalizedTitle);
-
-// const arrTitle = normalizedTitle.split(' ');
-// console.log(arrTitle);
-
-// const slugTitle = arrTitle.join('-')
-// console.log(slugTitle);
-
-const slugTitle = title.toLocaleLowerCase().split(' ').join('-');
-console.log(slugTitle);

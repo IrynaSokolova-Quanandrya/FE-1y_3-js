@@ -21,10 +21,6 @@ const cards = [
    * Видалення (по індексу), метод indexOf()
    */
   const cardToRemove = 'Карточка-3';
-  
-  const index = cards.indexOf(cardToRemove);
-  const newArr = cards.splice(index, 1);
-
 
   /*
    * Додавання (по індексу)

@@ -5,17 +5,8 @@
 
 const str = 'JavaScript';
 
-const arrStr = str.split('');
-let reversStr = '';
-console.log(arrStr);
 
-for (const letter of arrStr) {
-    if(letter === letter.toLocaleLowerCase()){
-        reversStr += letter.toLocaleUpperCase();
-    } else {
-        reversStr += letter.toLocaleLowerCase();
-    }
-    
-}
+let reversStr = '';
+
 
 console.log(reversStr);
