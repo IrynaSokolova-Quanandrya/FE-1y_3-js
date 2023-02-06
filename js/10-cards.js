@@ -14,13 +14,18 @@ const cards = [
     'Карточка-5',
   ];
   
-  console.table(cards);
-  
+  console.table(cards);  
 
   /*
    * Видалення (по індексу), метод indexOf()
    */
   const cardToRemove = 'Карточка-3';
+
+  const index = cards.indexOf(cardToRemove) 
+  console.log(index);
+
+  cards.splice(index, 1)
+  console.log(cards);
 
   /*
    * Додавання (по індексу)
@@ -28,8 +33,15 @@ const cards = [
   
 const cardToInsert = 'Карточка-6';
 
+cards.push(cardToInsert);
+console.log(cards);
 
   /*
    * Оновлення (по індексу)
    */
   const cardToUpdate = 'Карточка-4';
+  const idx = cards.indexOf(cardToUpdate)
+
+  cards.splice(idx, 1, cardToInsert)
+
+  console.log(cards);

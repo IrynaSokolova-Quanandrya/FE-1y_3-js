@@ -8,6 +8,14 @@
  * - Ченінг
  */
 // https://dev.to/devsatasurion/is-tailwind-css-accessible-52dc
-// Повинно вийти top-10-benefits-of-react-framework
-const title = 'Top 10 benefits of React framework';
 
+// Повинно вийти top-10-benefits-of-react-framework
+
+const title = 'Top 10 benefits of React framework';
+const normalizeTitle = title.toLocaleLowerCase();
+const titleArr = normalizeTitle.split(' ');
+const titleJoin = titleArr.join('-');
+console.log(titleJoin);
+
+const titleSlug = title.toLocaleLowerCase().split(' ').join('-');
+console.log(titleSlug);

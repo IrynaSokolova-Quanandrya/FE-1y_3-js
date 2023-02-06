@@ -4,11 +4,7 @@
  */
 
 const numbers = [51, 18, 13, 24, 7, 85, 19];
-let smallestNumber = numbers[0];
+let smallestNumber ;
 
-for (const number of numbers) {
-    if (number < smallestNumber) {
-        smallestNumber = number;
-    }
-}
+
 console.log(smallestNumber);
