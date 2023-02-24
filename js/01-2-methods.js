@@ -8,27 +8,49 @@
  * - updateRating
  * - getTrackCount
  */
-
 const playlist = {
-    name: 'Плейлист',
-    rating: 5,
-    tracks: ['трек-1', 'трек-2', 'трек-3'],
-    
-    changeName(newName) {
-    // console.log("this: ", this);
-      this.name = newName;
-    },
+      name: 'Плейлист',
+      rating: 5,
+      tracks: ['трек-1', 'трек-2', 'трек-3'],
 
-    addTrack(newTrack){
-      this.tracks.push(newTrack)
-    },
+      getName() {
+        console.log(this.name);
+      },
 
-  };
+      changeName(newName){
+       return this.name = newName;
+      }
+}
 
-  playlist.addTrack('track-4')
-  // array.push('')
+playlist.getName();
+playlist.changeName('Мій новий плейлист');
+
 console.log(playlist);
-  
-  console.log(playlist.changeName("Новий плейлист"));
 
-  console.log(playlist);
+
+
+
+
+// const playlist = {
+//     name: 'Плейлист',
+//     rating: 5,
+//     tracks: ['трек-1', 'трек-2', 'трек-3'],
+    
+//     changeName(newName) {
+//     // console.log("this: ", this);
+//       this.name = newName;
+//     },
+
+//     addTrack(newTrack){
+//       this.tracks.push(newTrack)
+//     },
+
+//   };
+
+//   playlist.addTrack('track-4')
+//   // array.push('')
+// console.log(playlist);
+  
+//   console.log(playlist.changeName("Новий плейлист"));
+
+//   console.log(playlist);

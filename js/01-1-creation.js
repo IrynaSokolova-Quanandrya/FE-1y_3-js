@@ -1,4 +1,7 @@
-// const obj = {} 
+// const obj1 = {
+
+// };
+
 /*
  * Об"єкти (робимо плейлист музики: ім"я, рейтинг, треки, кількість треків)
  * - Літерал об"єкту
@@ -6,14 +9,35 @@
  * - Як відрізнити об"єкт від області видимості
  */
 
-// const playlist = {
-//   name: 'Мій супер плейлист',
-//   rating: 5,
-//   tracks: ['трек-1', 'трек-2', 'трек-3'],
-//   trackCount: 3,
-// };
+const class1 = {
+  name: '10-А',  
+  students: ['Vlad', 'Fedir', 'Nastia', 'Matvii'], 
+  studentCount: 4,
+}
 
-// console.log(playlist);
+// console.log(class1);
+
+// class1.raiting = 10;
+
+// console.log(class1);
+
+// console.log(class1['raiting']);
+
+// class1.students.push('Yelisey');
+
+// console.log(class1);
+
+// delete class1.raiting;
+
+// console.log(class1);
+
+
+// console.log(studentCount);
+
+// console.log({} === {});
+// const a = {};
+// const b = a;
+// console.log(a === b);
 
 
 /*
@@ -23,25 +47,9 @@
  * - Відсутність властивостей
  */
 
-const playlist = {
-    name: 'Мій супер плейлист',
-    rating: 5,
-    tracks: ['трек-1', 'трек-2', 'трек-3'],
-    trackCount: 3,  
   
-  };
+
   
-  // console.log(playlist);
-  //  console.log(playlist.tracks); 
-  //  console.log(playlist["time"]); 
-
-  playlist.tracks.push("Новий трек")
-
-  playlist.time = "5h"
-
-  delete playlist.time
-
-  // arr[0]
 
   
   
@@ -54,11 +62,11 @@ const playlist = {
   /*
    * Короткий запис властивостей
    */
-  const username = 'Oleg';
+  const userName = 'Oleg';
   const email = 'mango@mail.com';
   
   const signupData = {
-    username,
+    userName,
     email,
   };
   
@@ -68,7 +76,7 @@ const playlist = {
 //   return {}
 // }
 // name({})
-  // console.log(signupData.username = "Mango");
+//   console.log(signupData.username = "Mango");
   
   /*
    * Обчислювані властивості
@@ -114,19 +122,19 @@ const playlist = {
   // console.log(obj);
   // console.log(obj1);
   /*
-   * Масиви і функції це об"екти
+   * Масиви і функції це об"єкти
    */
   
-  // const a = [1, 2, 3];
-  
-  // a.hello = ':)';
-  
-  // console.log(a);
-  
-  // const fn = function () {
-  //   console.log('hello');
-  // };
-  
-  // fn.hello = ';)';
-  
-  // console.dir(fn);
+  // const arr = [1, 2, 3, 4];
+  // console.log(arr);
+
+  // arr.greats = 'Hello!'
+  // console.log(arr);
+
+  // function name(params) {
+    
+  // }
+  // console.dir(name);
+
+  // name.greats = 'Hello1'
+  // console.dir(name);

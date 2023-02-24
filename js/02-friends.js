@@ -1,12 +1,27 @@
 /*
  * Работа с колекцією (масивом об"ектів)
  */
-// const friends = [
-//     { name: 'Mango', online: false },
-//     { name: 'Kiwi', online: true },
-//     { name: 'Poly', online: false },
-//     { name: 'Ajax', online: false },
-//   ];
+const friends = [
+    { name: 'Mango', online: false },
+    { name: 'Kiwi', online: true },
+    { name: 'Poly', online: false },
+    { name: 'Ajax', online: false },
+  ];
+
+  // console.log(friends[0]);
+
+  // for (const friend of friends) {
+  //   // console.log(friend.online);
+  //   // console.log(friend.online);
+  //   friend.age = 15;
+  // }
+
+console.table(friends);
+
+
+
+
+
   
   // console.log(friends[0]);
   // console.table(friends);
@@ -35,14 +50,14 @@
    * Шукаємо друга по імені
    */
   
-  const friends = [
-    { name: 'Mango', online: false },
-    { name: 'Kiwi', online: true },
-    { name: 'Poly', online: false },
-    { name: 'Ajax', online: false },
-  ];
+  // const friends = [
+  //   { name: 'Mango', online: false },
+  //   { name: 'Kiwi', online: true },
+  //   { name: 'Poly', online: false },
+  //   { name: 'Ajax', online: false },
+  // ];
 
-  console.table(friends);
+  // console.table(friends);
 
   // const findFriendByName = function (allFriends, nameToFind) {
   //   for (const friend of allFriends) {
@@ -57,6 +72,10 @@
   //   }
   // };
   
+  // friend.name === friendToFind // 'Poly' === 'Poly'
+
+
+
   // console.log(findFriendByName(friends, 'Poly'));
   // console.log(findFriendByName(friends, 'Chelsy'));
   
@@ -64,14 +83,14 @@
    * Отримуємо імена всіх друзів
    */
   
-  const getAllNames = function (allFriends) {
+  // const getAllNames = function (allFriends) {
 
-    for (const friend of allFriends) {
+  //   for (const friend of allFriends) {
       
-    }
-  };
+  //   }
+  // };
   
-  console.log(getAllNames(friends));
+  // console.log(getAllNames(friends));
   
   /*
    * Отримуємо імена тільки тих друзів які онлайн
@@ -92,17 +111,17 @@
   
   // console.log(getOnlineFriends(friends));
   
-  const getOfflineFriends = function () {};
+  // const getOfflineFriends = function () {};
   
   // console.log(getOfflineFriends(friends));
   
   // створити 2 масива онлайн і офлайн?
   // якщо тру - в перший, якщо ні - в другий
   
-  const getFriendsByStatus = function () {};
+  // const getFriendsByStatus = function () {};
   
-  const friendByStat = {
-    onlineFriends: [],
-    offlineFriends: [],
-  }
-  console.log(getFriendsByStatus(friends));
+  // const friendByStat = {
+  //   onlineFriends: [],
+  //   offlineFriends: [],
+  // }
+  // console.log(getFriendsByStatus(friends));

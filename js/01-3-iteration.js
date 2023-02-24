@@ -7,10 +7,38 @@ const feedback = {
     neutral: 10,
     bad: 3,
   };
-  
   // Number Array Boolean Object
 
-  const keys = Object.keys(feedback);
+  const allKeys = Object.keys(feedback);
+  console.log(allKeys);
+
+// feedback.good
+// feedback['good'];
+// feedback['neutral'];
+// feedback['bad'];
+
+let total = 0;
+  // for (const key of allKeys) {
+  //   // console.log(feedback[key]);
+  //   total += feedback[key]
+  // }
+
+// console.log(total);
+
+// const values = Object.values(feedback);
+// console.log(values);
+
+// for (const value of values) {
+//   console.log(value);
+//   total += value;
+// }
+
+// const entries = Object.entries(feedback)
+// console.log(entries);
+
+  // Number Array Boolean Object
+
+  // const keys = Object.keys(feedback);
   // console.log(keys);
 
   // let totalFeedback = 0;
