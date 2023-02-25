@@ -7,11 +7,10 @@
 
 const numbers = [5, 10, 15, 20, 25];
 
+const doubledNums = numbers.map(function (number) {
+ return number * 2;
+})
 
-const doubledNums = numbers.map(function(number) {
-  return number * 2
-}
-)
 
 // console.log('numbers', numbers);
 // console.log('doubledNums', doubledNums);
@@ -23,33 +22,40 @@ const players = [
   { id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false },
   { id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true },
 ];
-// console.table(players);
+console.table(players);
 
 /*
  * Отримуємо масив імен всіх гравців
  */
 
-const playerNames = players.map(function ({name}) {
+const playerNames = players.map(function({name}) {
   return name;
-})
+});
 
-console.log('playerNames', playerNames);
+// console.log('playerNames', playerNames);
 
 // console.log('playerIds', playerIds);
 
 
 /*
- * Збільшуємо кількість поінтів кожного гравця на 10% (розпорошуємо старий об'єкт)
+ * Збільшуємо кількість поінтів кожного гравця на 10 (розпорошуємо старий об'єкт)
  */
 
-const upatedPlayers = players.map(player => ({
+const upatedPlayers = players.map(function(player) {
+  // { id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false }
+  return {
     ...player,
-    points: player.points * 1.1,  
-}))
-
+    points: player.points + 10,     
+  }
+})
 // [.....................]
-// console.table(upatedPlayers);
+console.table(upatedPlayers);
 // console.log(upatedPlayers);
+
+
+
+
+
 
 /*
  * Збільшуємо кількість годин гравця по id
@@ -57,16 +63,7 @@ const upatedPlayers = players.map(player => ({
 
 const playerIdToUpdate = 'player-3';
 
-// const updatedPlayers = players.map(player => {
-//   if (playerIdToUpdate === player.id) {
-//     return {
-//       ...player,
-//       timePlayed: player.timePlayed + 100,
-//     };
-//   }
 
-//   return player;
-// });
 
 // Переписуємо на тернарник
 // console.table(updatedPlayers);
