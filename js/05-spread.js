@@ -3,12 +3,16 @@
  * - Array.prototype.concat() та аналог через spread
  */
 
-const numbers = [1, 6, 8, 10, 54, 3].concat([5, 4], [63, 11]);
+const numbers1 = [1, 2, 3, 54, 12]; 
+const numbers2 = [5, 65, 32, 14];
 
-const arr1 = [5, 4];
-const arr2 = [63, 11];
-const numbers1 = [ ...arr1, 1, 6, 8, 10, 54, 3, ...arr2]
+// const numbers = numbers1.concat(numbers2);
 
+const numbers = [...numbers1, 15, 20,58, 35, 36, 25, 34, ...numbers2];
+
+// console.log(numbers);
+
+// ...spread
   // console.log(numbers);
   // console.log(numbers1);
   
@@ -17,8 +21,8 @@ const numbers1 = [ ...arr1, 1, 6, 8, 10, 54, 3, ...arr2]
    */
   const temps = [18, 14, 12, 21, 17, 29, 24];
 
-  const lowestTemp = Math.min(18, 14, 12, 21, 17, 29, 24)
-  const hightTemp = Math.max(...temps)
+  const lowestTemp = Math.min(...temps)
+  const hightTemp = Math.max(18, 14, 12, 21, 17, 29, 24)
   
   // console.log(lowestTemp);
   // console.log(hightTemp);
@@ -53,7 +57,7 @@ const numbers1 = [ ...arr1, 1, 6, 8, 10, 54, 3, ...arr2]
   
   // const allTemps = lastWeekTemps.concat(currentTemps, nextWeekTemps)
 
-  const allTemps = [...lastWeekTemps, ...currentTemps, ...nextWeekTemps];
+  
 
  
   // console.log(allTemps);
@@ -63,26 +67,26 @@ const numbers1 = [ ...arr1, 1, 6, 8, 10, 54, 3, ...arr2]
    * - Object.prototype.assign() та spread
    */
   const a = { x: 1, y: 2 };
-  const b = { x: 0, z: 3 };
+  const b = { x: 5, c: 3 };
   
-// const c = Object.assign({}, b , a);
+// const c = Object.assign({}, a, b);
 
 const c = {
-  ...a, 
-  f: 5, 
-  ...b, 
-  g: 58
+  ...b,
+  s: 15,
+  ...a,
+  q: 25,
 }
 
-  
-console.log(c);
+console.log(c);  
+
   const defaultSettings = {
     theme: 'light',
     showNotifications: true,
     hideSidebar: false,
   };
 
-  const userSettings = {
+const userSettings = {
     showNotifications: false,
     hideSidebar: true,
   }
@@ -93,4 +97,4 @@ console.log(c);
   }
   
   
-  console.log(finalSettings);
+  // console.log(finalSettings);
