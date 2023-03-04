@@ -11,11 +11,9 @@
 
 const numbers = [5, 10, 15, 20, 25];
 
-const filteredNumbers = numbers.filter(function (number) {
-  return number < 5;
-})
+const filteredNumbers = numbers.filter(number => number > 10)
 
-console.log(filteredNumbers);
+// console.log(filteredNumbers);
 
 const players = [
   { id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false },
@@ -29,10 +27,14 @@ const players = [
  * Отримуємо масив всіх гравців онлайн
  */
 
-// const onlinePlayers = 
+const onlinePlayers = players.filter((player) => {
+  return player.online
+})
+.map((onlinePlyer)=>{
+  return onlinePlyer.name
+})
 
-
-// console.table(onlinePlayers);
+console.log(onlinePlayers);
 
 /*
  * Отримуємо масив всіх гравців офлайн

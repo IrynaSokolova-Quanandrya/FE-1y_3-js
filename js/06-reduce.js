@@ -4,17 +4,22 @@
  * - Повертає що завгодно 🤯
  * - Замінює все на світі, але використовувати потрібно з розумом
  */
+// array.reduce(сallback[(previousValue, currentItem, index, array)], initialValue)
 
 const numbers = [5, 10, 15, 20, 25];
+// let total = 0;
+const total = numbers.reduce((total, number)=>{  
+ return total += number;
+}, 0);
 
-const total = numbers.reduce(function(acc, number) {
-  console.log('acc: ', acc);
-  console.log(number);
-  return acc += number
+// acc = 0
+// acc = acc + number => 0 + 5 = 5
+// acc = acc + number => 5 + 10 = 15
+// acc = acc + number => 15 + 15 = 30
+// acc = acc + number => 30 + 20 = 50
+// acc = acc + number => 50 + 25 = 75
 
-}, 0)
-
-// console.log('total: ', total);
+console.log('total: ', total);
 
 
 /*
@@ -26,6 +31,10 @@ const salary = {
   poly: 50,
   ajax: 150,
 };
+
+
+
+
 
 
 // console.log(totalSalary);
@@ -101,4 +110,4 @@ console.log(substring)
   return substring;
 }
 
-getSubstring('Hello world', 3)
+// getSubstring('Hello world', 3)
