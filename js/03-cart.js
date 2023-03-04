@@ -47,10 +47,11 @@ const cart = {
   cart.add({ name: '🍋', price: 60 });
   cart.add({ name: '🍓', price: 110 });
   cart.add({ name: '🍋', price: 60 });
-   console.log(cart.items);
+   
+  console.log(cart.items);
   // console.table(cart.getItems());
   
-  // cart.remove('🍎');
+  cart.remove('🍎');
   // console.table(cart.getItems());
   
   // cart.clear();
