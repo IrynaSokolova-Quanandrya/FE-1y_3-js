@@ -24,12 +24,10 @@ const cart = {
           return;
         }
       }
-
       const newProduct = {
         ...product,
         quantity: 1,
       }
-
       this.items.push(newProduct)
     },
     remove(productName) {},
