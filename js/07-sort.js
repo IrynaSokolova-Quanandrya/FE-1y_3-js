@@ -1,9 +1,9 @@
 /*
  * Array.prototype.sort(callback(currentEl, nextEl){})
- * - Сортирует и ИЗМЕНЯЕТ оригинальный массив
- * - По умолчанию:
- *    - сортирует по возрастанию
- *    - приводит элементы к строке и сортирует по [Unicode](https://unicode-table.com/en/)
+ * - Сортує та ЗМІНЮЄ оригінальний масив
+ * - За замовчуванням:
+ *    - Сортує за зростанням 
+ *    - приводить елементи в рядок і сортує по [Unicode](https://unicode-table.com/en/)
  */
 
 const numbers = [1, 9, 6, 2, 3];
@@ -15,11 +15,11 @@ const letters = ['b', 'B', 'a', 'A'];
 // console.log('letters', letters);
 
 /*
- * compareFunction - функция сравнения (callback)
- * Элементы массива сортируются в соответствии с её возвращаемым значением
- *  - eсли compareFunction(A, B) меньше 0, сортировка поставит A перед B
- *  - если compareFunction(A, B) больше 0, сортировка поставит B перед A
- *  - если compareFunction(A, B) вернёт 0, сортировка оставит A и B на неизменными по отношению друг к другу, но отсортирует их по отношению ко всем другим элементам.
+ * compareFunction - функція порівняння (callback)
+ * Елементи масиву сортуються у відповідності до її значення, що повертається
+ *  - якщо compareFunction(A, B) менше 0, сортування поставить A перед B
+ *  - якщо compareFunction(A, B) більше 0, сортування поставить B перед A
+ *  - якщо compareFunction(A, B) поверне 0, сортування залишить A та B не зміненими по відношенню один до одного, але відсортує їх по відношенню до всіх інших елементів.
  */
 
 // numbers.sort((curEl, nextEl) => {
@@ -27,9 +27,9 @@ const letters = ['b', 'B', 'a', 'A'];
 // });
 
 /*
- * Как сделать копию массива чтобы не сортировать оригинальный
+ * Як зробити копію масиву щоб не змінювати (не сортувати) оригінальний
  * - Array.prototype.slice()
- * - Операция spread
+ * - Операція spread
  */
 
 const descSortedNumbers = [...numbers].sort((a, b) => b - a);
@@ -38,7 +38,7 @@ const ascSortedNumbers = [...numbers].sort((a, b) => a - b);
 // console.log('ascSortedNumbers', ascSortedNumbers);
 
 /*
- * Кастомная сортировка сложных типов
+ * Сортування складних типів
  */
 const players = [
     { id: 'player-1', name: 'Mango', timePlayed: 310, online: false },
@@ -48,7 +48,7 @@ const players = [
     { id: 'player-5', name: 'Chelsey', timePlayed: 80, online: true },
 ];
 
-// По игровому времени
+// По часу гри
 const sortedByBestPlayers = [...players].sort(
     (prevPlayer, nextPlayer) => nextPlayer.timePlayed - prevPlayer.timePlayed,
 );
