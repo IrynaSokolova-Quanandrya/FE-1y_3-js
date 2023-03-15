@@ -8,9 +8,7 @@
 
 const numbers = [5, 10, 15, 20, 25];
 // let total = 0;
-const total = numbers.reduce((total, number)=>{  
- return total += number;
-}, 0);
+const total = numbers.reduce((total, number)=>{return total += number}, 0);
 
 // acc = 0
 // acc = acc + number => 0 + 5 = 5
@@ -19,7 +17,7 @@ const total = numbers.reduce((total, number)=>{
 // acc = acc + number => 30 + 20 = 50
 // acc = acc + number => 50 + 25 = 75
 
-console.log('total: ', total);
+// console.log('total: ', total);
 
 
 /*
@@ -31,11 +29,6 @@ const salary = {
   poly: 50,
   ajax: 150,
 };
-
-
-
-
-
 
 // console.log(totalSalary);
 
@@ -78,8 +71,17 @@ const tweets = [
   { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
 ];
 
-const allTags = tweets.reduce((acc, tweet) => [...acc, ...tweet.tags], []);
-// console.log(allTags);
+const allTags = tweets.reduce((tags, tweet)=>{
+  return [...tags, ...tweet.tags]
+}, [])
+
+// {
+// js: 1,
+// nodejs: 2,
+// html: 3
+// }
+
+console.log(allTags);
 
 // acc = [], tweet.tags = ['js', 'nodejs'] return [...[], ...['js', 'nodejs']]
 // acc = ['js', 'nodejs'] tweet.tags ['html', 'css']
@@ -89,25 +91,14 @@ const allTags = tweets.reduce((acc, tweet) => [...acc, ...tweet.tags], []);
 /*
  * Ведемо статистику тегів
  */
-// const tagsStats = allTags.reduce((acc, tag) => {
-  
-// }, );
+const tagsStats = allTags.reduce((acc, tag) => {
+  return {
+  ...acc,
+  [tag]: acc[tag] ? acc[tag] += 1 : acc[tag] = 1,
+ }
+}, {});
 
-// const tagsStats = allTags.reduce((acc, tag) => {
-//   console.log([tag]);
-//   return {
-//     ...acc,
-//     [tag]: acc[tag] ? acc[tag] + 1 : 1,
-//   };
-// }, {});
-// console.log(tagsStats);
+console.log(tagsStats);
 
 // якщо властивість з ключем tag є, збільшуємо його значення на 1
 // якщо властивості немає с таким ключем що в tag, створити і записати 1
-function getSubstring(string, length) {
-  const substring = string.split('').slice(0, length).join(''); // Change this line
-console.log(substring)
-  return substring;
-}
-
-// getSubstring('Hello world', 3)
