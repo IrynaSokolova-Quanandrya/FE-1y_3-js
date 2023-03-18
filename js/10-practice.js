@@ -25,3 +25,32 @@
 його стиль background-color на "lightblue".
 
 */
+
+// У кожній області видимості буде створена своя, незалежна змінна value
+
+console.log(value); // ReferenceError: value is not defined
+const value = 5;
+console.log(value); // 5
+
+if (true) {
+  console.log(value); // ReferenceError: value is not defined
+  const value = 10;
+  console.log(value); // 10
+}
+
+console.log(value); // 5
+
+
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

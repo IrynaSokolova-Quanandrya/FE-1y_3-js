@@ -2,6 +2,8 @@ const magicBtn = document.querySelector('.js-magic-btn');
 
 // Об'єкт window та document
 
+// console.log(document.querySelector());
+
 // console.log(document);
 
 /*
@@ -14,10 +16,16 @@ const magicBtn = document.querySelector('.js-magic-btn');
  * Як відбувається парс!!!
  */
 
-const navRef = document.querySelector('.site-nav');
-// console.log(navRef);
+const navListEl = document.querySelector('.site-nav');
+console.log(navListEl);
 
-const navItemRef = document.querySelectorAll('.site-nav__item');
+const itemEl = document.querySelectorAll('.site-nav .site-nav__item')
+console.log(itemEl);
+
+// const navRef = document.querySelector('.site-nav');
+// // console.log(navRef);
+
+// const navItemRef = document.querySelectorAll('.site-nav__item');
 // console.log(navItemRef);
 
 
