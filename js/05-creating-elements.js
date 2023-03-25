@@ -3,58 +3,50 @@
  * - Вставка вузлів: appendChild(elem), insertBefore(elem, nextSibling), append(...elems), prepend(...elems)
  */
 
-const titleHeroContainerEl = document.querySelector('.hero')
 
-// console.log(document);
+// Створюємо заголовок
+
+// const containerEl = document.querySelector('body')
+// const listEl = document.querySelector('.site-nav')
+
 
 const titleEl = document.createElement('h1');
+titleEl.textContent = 'Привіт, це перший мій створений елемент!';
 titleEl.classList.add('title');
-titleEl.textContent = 'Заголовок!'
-titleEl.style.color = 'tomato';
+titleEl.style.backgroundColor = 'tomato';
+// console.log(titleEl); 
 
+// containerEl.appendChild(titleEl);
+// document.body.insertBefore(titleEl, listEl)
 
-
-// console.log(titleEl);
-
-titleHeroContainerEl.appendChild(titleEl)
-titleHeroContainerEl.appendChild(titleEl)
-
-/*
- * Створюємо заголовок
-/*
-
-
- * Створюємо зображення
+ /* Створюємо зображення
  * https://cdn.pixabay.com/photo/2018/07/26/07/45/valais-3562988_1280.jpg
  * valais-alpine-mountains-glacier
  */
-const imgEl = document.createElement('img');
-imgEl.src = 'https://cdn.pixabay.com/photo/2018/07/26/07/45/valais-3562988_1280.jpg';
-imgEl.alt = 'img';
-imgEl.width = '500';
 
 
-// titleHeroContainerEl.appendChild(titleEl)
-// titleHeroContainerEl.appendChild(imgEl)
 
-titleHeroContainerEl.append(titleEl, imgEl)
 
-// titleHeroContainerEl.insertBefore(imgEl, titleEl)
+
 
 /*
  * Створюємо і додаємо новий пункт меню
  */
+const listEl = document.querySelector('.site-nav')
 
-const navEl = document.querySelector('.site-nav')
-
-const navItemEl = document.createElement('li');
-navItemEl.classList.add('site-nav__item');
-console.log(navItemEl);
+const itemEl = document.createElement('li');
+itemEl.classList.add('site-nav__item');
 
 const linkEl = document.createElement('a');
+linkEl.href = '';
 linkEl.classList.add('site-nav__link');
-linkEl.textContent = 'Link'
-console.log(linkEl);
+linkEl.textContent = 'Особистий кабінет';
 
-navItemEl.appendChild(linkEl)
-navEl.prepend(navItemEl)
+
+// console.log(linkEl);
+
+itemEl.appendChild(linkEl);
+// console.log(itemEl);
+// listEl.appendChild(itemEl)
+
+listEl.append(itemEl)

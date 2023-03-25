@@ -12,49 +12,46 @@ const colorPickerOptions = [
   
   const colorPickerContainerEl = document.querySelector('.js-color-picker');
   
-  // const option = colorPickerOptions[0];
-  // console.log(option);
+  const option = colorPickerOptions[0]
 
-  // const buttonEl = document.createElement('button');
-  // buttonEl.type = 'button';
-  // buttonEl.textContent = option.label;
-  // buttonEl.style.backgroundColor = option.color;
+  // const btnEl = document.createElement('button');
+  // btnEl.classList.add('color-picker__option');
+  // btnEl.textContent = option.label;
+  // btnEl.style.backgroundColor = option.color;
+  // btnEl.type = 'button';
 
+  // console.log(btnEl);
+
+  // colorPickerContainerEl.appendChild(btnEl);
   
+const fnA = function (params) {
+  
+}
+  function name(params) {
+    
+  }
 
+  const fnB = ()=>{}
 
-  // const buttons =  colorPickerOptions.map(function (option) {
-  //   const buttonEl = document.createElement('button');
-  //     buttonEl.type = 'button';
-  //     buttonEl.classList = 'color-picker__option'
-  //     buttonEl.textContent = option.label;
-  //     buttonEl.style.backgroundColor = option.color;
+  (param)=>{}
 
-  // // console.log(buttonEl);
-  // return buttonEl
-  // })
+const btnElems = colorPickerOptions.map((option)=>{
+  const btnEl = document.createElement('button');
+  btnEl.classList.add('color-picker__option');
+  btnEl.textContent = option.label;
+  btnEl.style.backgroundColor = option.color;
+  btnEl.type = 'button';
 
-  // console.log(buttons);
+  return btnEl
+})
 
-  // colorPickerContainerEl.append(...buttons)
+  console.log(...btnElems);
 
+  colorPickerContainerEl.append(...btnElems)
+  
+  
   /*
    * Пишемо функцію для створення розмітки колорпікеру
    */
 
-  const createBtnEl = function (options) {
-   return options.map(function (option) {
-      const buttonEl = document.createElement('button');
-        buttonEl.type = 'button';
-        buttonEl.classList = 'color-picker__option'
-        buttonEl.textContent = option.label;
-        buttonEl.style.backgroundColor = option.color;
-    return buttonEl
-    })    
-    
-  }
-
-  const btns = createBtnEl(colorPickerOptions);
-
-
-  colorPickerContainerEl.append(...btns)
+  
