@@ -18,17 +18,16 @@
 * 4.3 робимо перевірку на натиснення по потрібній клавіші ESC
 */
 
-const refs = {
-    openModalBtn: document.querySelector('[data-action="open-modal"]'),
-    closeModalBtn: document.querySelector('[data-action="close-modal"]'),
-    backdrop: document.querySelector('.js-backdrop'),
-  };
-  
-  refs.openModalBtn.addEventListener('click', onBtnClickOpen);
-  refs.closeModalBtn.addEventListener('click', onBtnClickClose);
-  refs.backdrop.addEventListener('click', onBackdropClose);
 
-// console.log(document.body);
+    const openModalBtn = document.querySelector('[data-action="open-modal"]');
+    const closeModalBtn = document.querySelector('[data-action="close-modal"]');
+    const backdrop = document.querySelector('.js-backdrop');
+    
+  
+  openModalBtn.addEventListener('click', onBtnClickOpen);
+  closeModalBtn.addEventListener('click', onBtnClickClose);
+  backdrop.addEventListener('click', onBackdropClose);
+
 
   function onBtnClickOpen() {
     document.body.classList.add('show-modal')
@@ -39,12 +38,11 @@ const refs = {
   }
 
   function onBackdropClose(event) {
-    // console.log(event.currentTarget);
-    // console.log(event.target);
+    // console.log('currentTarget: ', event.currentTarget);
+    // console.log('target: ', event.target);
     if(event.currentTarget === event.target){
-      onBtnClickClose()
-    }
- 
+      onBtnClickClose();
+    }    
   }
 
 
