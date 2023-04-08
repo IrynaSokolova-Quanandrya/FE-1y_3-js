@@ -9,17 +9,13 @@ const refs = {
     clearBtn: document.querySelector('.js-clear'),
   };
   
- window.addEventListener('keydown', onKeypress);
- refs.clearBtn.addEventListener('click', onClearOutput)
-  
-  function onKeypress(event) {
-    // console.log(event);
-    // console.log('event.key: ', event.key);
-    console.log('event.code: ', event.code);
-  
-    refs.output.textContent += event.key;
-  }
-  
-  function onClearOutput() {
-    refs.output.textContent = '' ;
-  }
+ window.addEventListener('keypress', onKeypress)
+
+ function onKeypress(event){
+  // console.log(event);
+  console.log('event.code: ', event.code);
+  console.log('event.key: ', event.key);
+
+  refs.output.textContent += event.code;
+
+ }

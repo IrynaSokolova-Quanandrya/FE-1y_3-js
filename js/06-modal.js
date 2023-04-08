@@ -27,23 +27,34 @@
   openModalBtn.addEventListener('click', onBtnClickOpen);
   closeModalBtn.addEventListener('click', onBtnClickClose);
   backdrop.addEventListener('click', onBackdropClose);
-
+  
+  
+  function onModalEscClose(evt){
+    console.log(evt);
+      if (evt.code === "Escape"){
+          onBtnClickClose()
+      }
+  };
 
   function onBtnClickOpen() {
-    document.body.classList.add('show-modal')
+    document.body.classList.add('show-modal');
+    window.addEventListener("keydown" , onModalEscClose);
   }
 
+  
   function onBtnClickClose() {
-    document.body.classList.remove('show-modal')
+    document.body.classList.remove('show-modal');
+    window.removeEventListener("keydown" , onModalEscClose);
   }
 
   function onBackdropClose(event) {
-    // console.log('currentTarget: ', event.currentTarget);
-    // console.log('target: ', event.target);
+    console.log('currentTarget: ', event.currentTarget);
+    console.log('target: ', event.target);
     if(event.currentTarget === event.target){
       onBtnClickClose();
     }    
   }
+
 
 
 

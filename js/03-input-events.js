@@ -16,4 +16,29 @@
     const btn = document.querySelector('.js-button');
   
   
-   
+    input.addEventListener('input', onInputChange);
+    licenseCheckbox.addEventListener('change', onCheckboxChange)
+
+
+
+    function onInputChange(event) {
+      const inputValue = event.currentTarget.value;
+
+      nameLabel.textContent = inputValue;
+    }
+
+    function onCheckboxChange(event) {
+      // console.log(event.currentTarget.checked);
+      // console.dir(btn.disabled);
+
+         //  false       false
+      btn.disabled = !event.currentTarget.checked
+    }
+
+
+
+
+    
+   // function onFocusChange(evt) {
+   //    console.log(evt.currentTarget.value);
+   // }
