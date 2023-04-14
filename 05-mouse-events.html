@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <style>
       .box {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -22,9 +23,15 @@
       }
 
       .inner-box {
+        position: absolute;
+        
         width: 100px;
-        height: 100px;
-        background-color: #ffc107;
+  height: 100px;
+  background-color: red;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
       }
     </style>
   </head>
