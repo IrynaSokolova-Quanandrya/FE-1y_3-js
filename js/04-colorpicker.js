@@ -1,5 +1,5 @@
 const colors = [
-  { hex: '#f44336', rgb: '244,67,54' },
+  { hex: '#f44336', rgb: '244.67.54' },
   { hex: '#e91e63', rgb: '233,30,99' },
   { hex: '#9c27b0', rgb: '156,39,176' },
   { hex: '#673ab7', rgb: '103,58,183' },
@@ -21,54 +21,60 @@ paletteContainer.insertAdjacentHTML('beforeend', cardsMarkup);
 
 paletteContainer.addEventListener('click', onPaletteContainerClick);
 
+function onPaletteContainerClick(event) {
+  console.log(event.target);
+  console.log(event.target.dataset.hex);
+
+  document.body.style.background = event.target.dataset.hex;
+}
+
 function createColorCardsMarkup(colors) {
   return colors
     .map(({ hex, rgb }) => {
       return `
     <div class="color-card">
-     <div><div><div> <div
+     <div
      class="color-swatch"
      data-hex="${hex}"
      data-rgb="${rgb}"
      style="background-color: ${hex}"
-   ></div></div></div></div>
+   ></div>
       <div class="color-meta">
         <p>HEX: ${hex}</p>
         <p>RGB: ${rgb}</p>
       </div>
     </div>
     `;
-    })
-    .join('');
+    }).join('');
 }
 
-function onPaletteContainerClick(evt) {
-  const isColorSwatchEl = evt.target.classList.contains('color-swatch');
+// function onPaletteContainerClick(evt) {
+//   const isColorSwatchEl = evt.target.classList.contains('color-swatch');
 
-  if (!isColorSwatchEl) {
-    return;
-  }
+//   if (!isColorSwatchEl) {
+//     return;
+//   }
 
-  const swatchEl = evt.target;
-  const parentColorCard = swatchEl.closest('.color-card');
+//   const swatchEl = evt.target;
+//   const parentColorCard = swatchEl.closest('.color-card');
 
-  removeActiveCardClass();
-  addActiveCardClass(parentColorCard);
-  setBodyBgColor(swatchEl.dataset.hex);
-}
+//   removeActiveCardClass();
+//   addActiveCardClass(parentColorCard);
+//   setBodyBgColor(swatchEl.dataset.hex);
+// }
 
-function setBodyBgColor(color) {
-  document.body.style.backgroundColor = color;
-}
+// function setBodyBgColor(color) {
+//   document.body.style.backgroundColor = color;
+// }
 
-function removeActiveCardClass() {
-  const currentActiveCard = document.querySelector('.color-card.is-active');
+// function removeActiveCardClass() {
+//   const currentActiveCard = document.querySelector('.color-card.is-active');
 
-  if (currentActiveCard) {
-    currentActiveCard.classList.remove('is-active');
-  }
-}
+//   if (currentActiveCard) {
+//     currentActiveCard.classList.remove('is-active');
+//   }
+// }
 
-function addActiveCardClass(card) {
-  card.classList.add('is-active');
-}
+// function addActiveCardClass(card) {
+//   card.classList.add('is-active');
+// }
