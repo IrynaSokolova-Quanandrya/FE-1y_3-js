@@ -31,24 +31,51 @@
  * Intersection Observer с unobserve (один на всіх)
  */
 
-const images = document.querySelectorAll('img')
+const images = document.querySelectorAll('img');
+
 const options = {
-  rootMargin: '150px',
+  rootMargin: '150px'
 }
+
 const io = new IntersectionObserver((entries, observer)=>{
-  entries.forEach(entry=>{    
-    if(entry.isIntersecting){
+    entries.forEach((entry)=>{
+      if(entry.isIntersecting){
+        const image = entry.target;
+        const imgUrl = image.dataset.lazy;
 
-      const image = entry.target;
+        image.src = imgUrl;
+        image.classList.add('appear');
 
-      image.src = image.dataset.lazy;
-      image.classList.add('appear');
+        observer.unobserve(image);
+      }
+    })
+}, options);
 
-      observer.unobserve(image)
-    }
-  })
-}, options)
+// Для колекції елементів
 images.forEach(image=>io.observe(image))
+
+// Для одного елемента
+// io.observe(image)
+
+
+
+// const options = {
+//   rootMargin: '150px',
+// }
+// const io = new IntersectionObserver((entries, observer)=>{
+//   entries.forEach(entry=>{    
+//     if(entry.isIntersecting){
+
+//       const image = entry.target;
+
+//       image.src = image.dataset.lazy;
+//       image.classList.add('appear');
+
+//       observer.unobserve(image)
+//     }
+//   })
+// })
+// images.forEach(image=>io.observe(image))
 
 
 
