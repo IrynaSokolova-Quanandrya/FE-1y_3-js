@@ -2,48 +2,25 @@
 
 ## Вступ
 
-- розбераємо конспект
-- інструкція
-- вираз
-- інтерфейс
-- властивість
-- метод
-- встановлюємо Prettier
-- Bracket Pair Colorizer 2 для VSC
-- Що таке JS і як він виконується в браузері:
-  - парс,
-  - двіжок,
-  - джава скрипт інтерпретатор,
-  - синхронність коду
-- назви змінних, кемелкейс нотація
-- примітивні типи даних
-- унікальність ідентифікаторів
-- console.log()
-- синхронність коду
+Кахут
 
-## ESM в браузере
-
-- Підключення скрипта через тег `script[type="module"]`
-- Відра (файли), захисні контейнери (модулі) та бассейн коду.
-- Implicit strict mode
-
-## Синтаксис
-
-- Вирази, інструкції та крапка з комою
-- Змінні:
-  - Об'явлення let и const
-- Отримання даних від користувача
-
-  - prompt та confirm
-
-- Числа
-  - Мат. операторы
-  - Объекты Number и Math
-- Строки
-  - Конкатенация
-  - Шаблонные строки
-  - Методы
-- Операторы сравнения
-- Логические операторы
-- Ветвления
-- Блочная область видимости переменных
+- Що таке бібліотека
+- Що таке фреймворк
+- Що таке плагін
+- Яка між ними різниця
+- [https://basiclightbox.electerious.com/]
+- [https://pawelgrzybek.github.io/siema/]
+- [https://github.com/sciactive/pnotify]
+- [https://atomiks.github.io/tippyjs/]
+- [https://slimselectjs.com/]
+- [https://refreshless.com/nouislider/]
+- [https://photoswipe.com/]
+- [https://github.com/sachinchoolur/lightgallery.js]
+- [https://github.com/feimosi/baguetteBox.js]
+- [https://flatpickr.js.org/]
+- [https://github.com/Pikaday/Pikaday]
+- [https://nosir.github.io/cleave.js/]
+- [https://github.com/videojs/video.js]
+- [https://github.com/sampotts/plyr]
+- [https://www.chartjs.org/]
+- [https://plainjs.com/]
