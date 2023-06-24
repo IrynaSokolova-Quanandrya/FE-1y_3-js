@@ -8,6 +8,7 @@
 - Що таке фреймворк
 - Що таке плагін
 - Яка між ними різниця
+- [https://github.com/ai/nanoid]
 - [https://basiclightbox.electerious.com/]
 - [https://pawelgrzybek.github.io/siema/]
 - [https://github.com/sciactive/pnotify]
