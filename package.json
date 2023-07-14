@@ -1,0 +1,31 @@
+{
+  "name": "fe-1y_3",
+  "version": "1.0.0",
+  "description": "- розбераємо конспект\r - інструкція\r - вираз\r - інтерфейс\r - властивість\r - метод\r - встановлюємо Prettier\r - Bracket Pair Colorizer 2 для VSC\r - Що таке JS і як він виконується в браузері:\r   - парс,\r   - двіжок,\r   - джава скрипт інтерпретатор,\r   - синхронність коду\r - назви змінних, кемелкейс нотація\r - примітивні типи даних\r - унікальність ідентифікаторів\r - console.log()\r - синхронність коду",
+  "main": "index.js",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IrynaSokolova-Quanandrya/FE-1y_3-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IrynaSokolova-Quanandrya/FE-1y_3-js/issues"
+  },
+  "homepage": "https://github.com/IrynaSokolova-Quanandrya/FE-1y_3-js#readme",
+  "dependencies": {
+    "handlebars": "^4.7.7",
+    "parcel": "^2.9.3"
+  },
+  "devDependencies": {
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "parcel-transformer-hbs": "^1.0.4"
+  }
+}

@@ -1,6 +1,22 @@
 {{#each this}}
 <li class="gallery__item">
     <div class="gallery__thumb">
+        <img src="{{flag}}" alt="Прапор " width="320">
+    </div>
+        <h2>{{name}}</h2>
+        <p><b>Столиця: {{capital}}</b></p>
+        <p><b>Валюта: {{currency}}</b></p>
+        <p><b>Офиційна мова: {{language}}</b> </p>
+        <p><b>Населення:{{population}}</b> людей</p> 
+</li>
+ {{/each}} 
+
+
+
+
+{{!-- {{#each this}}
+<li class="gallery__item">
+    <div class="gallery__thumb">
       <img src="{{flag}}" alt="Прапор {{name}}" width="320">
     </div>
     <h2>{{name}}</h2>
@@ -17,7 +33,7 @@
   <p style="color: green;">Фух, пронесло</p>
     {{/unless}}
     
-    {{/each}}
+    {{/each}} --}}
 
   
   
