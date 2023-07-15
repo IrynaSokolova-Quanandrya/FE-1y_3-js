@@ -8,7 +8,7 @@ import '../css/feedback-form.css';
 const formRef = document.querySelector('.js-feedback-form');
 const textareaRef = document.querySelector('.js-feedback-form textarea');
 
-formRef.addEventListener('submit', handleFormsubmit);
+formRef.addEventListener('submit', handleFormSubmit);
 textareaRef.addEventListener('input', handleTextareaInput);
 
 getValueFromLocalStorage();
@@ -17,11 +17,7 @@ getValueFromLocalStorage();
  * - Видаляємо повідомлення зі сховища
  * - Очищуємо форму
  */
-function handleFormsubmit(event) {
-    event.preventDefault();
-
-    event.currentTarget.reset();
-    localStorage.removeItem('comment');
+function handleFormSubmit(event) {
 }
 
 
@@ -31,19 +27,14 @@ function handleFormsubmit(event) {
  * - Можно додати throttle
  */
 function handleTextareaInput(event) {
-    const value = event.currentTarget.value;
-    localStorage.setItem('comment', value);
+   
 }
 /*
  * - Отримуємо значення зі сховища
  * - Якщо там щось було, оновлюємо DOM
  */
 function getValueFromLocalStorage() {
-    const value = localStorage.getItem('comment');
-    
-    if (value) {
-        textareaRef.textContent = value;
-    }
+   
     
 }
 
