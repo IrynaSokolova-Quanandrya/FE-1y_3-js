@@ -1,21 +1,34 @@
 // import '../css/common.css';
 
+const userName = 'Poly';
+
+// console.log(userName);
+
+
+
+// console.log('Виконання першого логу');
+
+// console.log('Виконання другого логу');
+
+
 /*
  * Метод window.setTimeout(callback, delay, args)
  */
+const logger = () => {
+    console.log(`Код всередині setTimeout`);
+}
+console.log('Before');
+const firstTimeoutId = setTimeout(()=>{
+    console.log('Перший планувальник');
+}, 100);
 
-const logger = (time, param) => console.log(`Ця функція викличеться через ${time} секунд`);
+const timeoutId = setTimeout(()=>{
+    console.log('Другий планувальник');
+}, 100);
 
-console.log('До setTimeout');
-
-const timeoutId = setTimeout(logger, 2000, 2)
-
-console.log(timeoutId);
-// for (let i = 0; i < 100000; i+=1) {
-//   console.log(i);  
-// }
-
-console.log('Після setTimeout');
+console.log('after');
+clearTimeout(timeoutId);
+clearTimeout(firstTimeoutId);
 
 /*
  * Очистка таймаута с clearTimeout(timeoutId)
