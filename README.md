@@ -1,5 +1,8 @@
 # js-22
 
+1. Що таке коллбек
+2. Що таке функція конструктор? 3.Що таке екземпляр класу та як його створити?
+
 - Promise API
   - Promise.prototype.then(result)
   - Promise.prototype.catch(error)
