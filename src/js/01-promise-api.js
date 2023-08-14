@@ -4,7 +4,65 @@
  *  - resolve
  *  - reject
  *  - Promise.prototype.then(onResolve, onReject)
+ *  - catch()
+ *  - then()
+ *  - finally() 
  */
+
+// console.dir(Promise);
+
+// const promise = new Promise((resolve, reject) => {
+//   const isFullfilled = Math.random()>0.5
+//   // console.log(isFullfilled);
+
+//   if(isFullfilled){
+//     resolve('Проміс виконався успішно!!!')
+//   }  
+//     reject('проміс виконався з помилкою')
+// });
+
+// console.log(promise); 
+
+// promise
+// .then((result)=>{
+//   console.log(`1 then ${result}`);
+//   return 5;
+// })
+// .then((result)=>{
+//   console.log(`2 then ${result}`);
+//   return 5;
+// })
+// .then((result)=>{
+//   console.log(`3 then ${result}`);
+// })
+// .catch((error)=>{
+//   console.log(error);
+// })
+// .finally(()=>{
+//   console.log('Код виконається в будь-якому випадку');
+// })
+let pokemon;
+
+fetch('https://pokeapi.co/api/v2/pokemon/5')
+.then((result)=>{return result.json()})
+.then(data=>{console.log(data);})
+// .then(abilities=>console.log(abilities))
+.catch((error)=>{console.log(error)})
+
+// console.log(pokemon);
+
+// function onSuccess(result) {
+//   console.log(result)
+// }
+// function onError(error) {
+//   console.log(error);
+// }
+
+
+
+
+
+
 
 // const user = {
 //     name: 'Poly',
