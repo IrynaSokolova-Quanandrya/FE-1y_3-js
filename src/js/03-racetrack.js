@@ -14,29 +14,50 @@ const refs = {
   progressField: document.querySelector('.js-progress'),
   tableBody: document.querySelector('.js-results-table > tbody'),
 };
-function run(horse) {
-  const time = getRandomTime(2000, 3000);
 
-  return new Promise((resolve, rejected)=>{
-  setTimeout(()=>{
-    resolve({horse, time})
-  },
-  time);
-  
-})  
+
+const promises = horses.map(horse => run(horse))
+
+console.log(`🤖 Заїзд розпочався, ставки не приймаються!`);
+
+Promise.race(promises).then(({horse, time})=>
+  console.log(`%c🎉 Переможець ${horse}, финишував за ${time}мс часу`,'color: green')
+  )
+
+  Promise.all(promises).then(()=>{
+    console.log(`📝 Заїзд закінчився, приймаються ставки.`);
+  })
+
+  function run (horse){
+    const time = getRandomTime(1500, 2500);
+    return new Promise(resolve=>{
+      setTimeout(
+        ()=>{
+        resolve({horse, time})
+      },
+      time)
+    })
+  }
+
+function getRandomTime(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-run(horses[1]).then(({horse, time}) =>{
-  refs.winnerField.textContent = `🎉 Переможець ${horse}, финишував за ${time}
-  часу`
-}).catch(console.error)
 
-
-
-
-
-
-
+/**
+ * 🤖 Заїзд розпочався, ставки не приймаються!
+ * 🎉 Переможець ${horse}, финишував за ${time}мс часу
+ * 📝 Заїзд закінчився, приймаються ставки.
+ * 
+ *  Promise.race([]) для очікування першово проміса, що виконався
+ *  Promise.all([]) для очікування всіх промісів
+ * 
+ * determineWinner
+ * updateWinnerField
+ * updateProgressField
+ * waitForAll
+ * updateResultsTable
+ */
 
 // let raceCounter = 0;
 // const refs = {
@@ -104,40 +125,4 @@ run(horses[1]).then(({horse, time}) =>{
 //     }, time);
 //   });
 // }
-
-function getRandomTime(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-
-
-
-
-
-//  Math.floor(num) - повертає найбільше ціле число, менше, або дорівнює вказаному
-console.log(Math.floor(1.7)); // 1
-
-// Math.ceil(num) - повертає найменше ціле число,
-// більше, або дорівнює зазначеному числу.
-console.log(Math.ceil(1.2)); // 2
-
-// Math.round(num) - повертає значення числа, округлене до найближчого цілого
-console.log(Math.round(1.2)); // 1
-console.log(Math.round(1.5)); // 2
-
-// Math.max(num1, num2, ...) - повертає найбільше число з набору
-console.log(Math.max(20, 10, 50, 40)); // 50
-
-// Math.min(num1, num2, ...) - повертає найменше число з набору
-console.log(Math.min(20, 10, 50, 40)); // 10
-
-// Math.pow(base, exponent) - зведення в ступінь
-console.log(Math.pow(2, 4)); // 16
-
-// Math.random() - повертає псевдовипадкове число в діапазоні [0, 1)
-console.log(Math.random()); // випадкове число між 0 и 1
-console.log(Math.random() * (10 - 1) + 1); // випадкове число від 1 до 10
-
-
-
 
