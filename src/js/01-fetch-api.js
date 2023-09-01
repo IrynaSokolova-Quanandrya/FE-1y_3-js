@@ -34,6 +34,8 @@ function createPokemon(pokemon) {
  *  - Fetch API
  *  - Владка Network
  *  - HTTP-методи
+ *  - статус відповіді коди 
+ *  - postman
  *  - Заголовки
  *  - MIME-типи
  *  - Параметри запиту
@@ -41,7 +43,6 @@ function createPokemon(pokemon) {
  * - Обрабобка 404 з fetch
  * - Аутентифікація
  * - Заголовки
- * - Бібліотеки-обгортки
  * - https://pokeapi.co/
  * - [https://pixabay.com/api/docs/]
  * - [https://openweathermap.org/api]
