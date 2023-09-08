@@ -49,21 +49,28 @@ function createPokemon(pokemon) {
  * - [https://newsapi.org/]
  */
 
-const url = 'https://newsapi.org/v2/everything?q=flowers'
-const options = {
-    headers:{
-        'X-Api-Key': '3ce63eea477043d7a470d2b21dc5ab4b'
-    }
-}
+// const url = 'https://newsapi.org/v2/everything?q=flowers'
+// const options = {
+//     headers:{
+//         'X-Api-Key': '3ce63eea477043d7a470d2b21dc5ab4b'
+//     }
+// }
 
-fetch(url, options)
-.then(response=>response.json())
-.then(articles=>{
-    console.log(articles);
-    return articles.articles})
-.then(articles=>console.log(articles))
+// fetch(url, options)
+// .then(response=>response.json())
+// .then(articles=>{
+//     console.log(articles);
+//     return articles.articles})
+// .then(articles=>console.log(articles))
 
 
+fetch('https://restcountries.com/v3.1/name/uk')
+.then(r=>r.json())
+.then(r=>{
+    r.map((cantry)=>{
+        console.log(cantry.name.common);
+    })
+})
 
 
 
