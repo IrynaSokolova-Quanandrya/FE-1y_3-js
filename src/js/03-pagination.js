@@ -11,8 +11,7 @@
  * 4330ebfabc654a6992c2aa792f3173a3
  * http://newsapi.org/v2/everything?q=cat&language=en&pageSize=5&page=1
  */
-import NewsApi from './news-api';
-import articlesTpl from './templates/articles.hbs'
+import { NewsApi } from "./api-service";
 
 const formRef = document.querySelector('.js-search-form');
 const articlesContainerRef = document.querySelector('.js-articles-container');
@@ -22,32 +21,87 @@ formRef.addEventListener('submit', onSearchForm);
 loadMoreBtn.addEventListener('click', onLoadMoreClick);
 
 const newsApiService = new NewsApi();
-
+console.log(newsApiService);
+fetch('https://api.pexels.com/v1/')
+.then(r=>r.json())
+.then(console.log)
 function onSearchForm(event) {
-  event.preventDefault();
-  const form = event.currentTarget;
+    event.preventDefault();
 
-  articlesContainerRef.innerHTML = '';
-  newsApiService.resetPage()
-  newsApiService.searchQuery = form.elements.query.value;
-
-  newsApiService.fetchArticles() 
-  .then(createMarkup)
-}
-
-function onLoadMoreClick() {
-  newsApiService.increasePage();
-  console.log(newsApiService);
+    const form = event.currentTarget;  
+    newsApiService.searchQuery = form.elements.query.value;
+    newsApiService.resetPage()
+    form.elements.query.value = '';
+    newsApiService.fetchArticles() 
+    .then(createMarkup)
+  }
   
-  newsApiService.fetchArticles()
-  .then(createMarkup);
+  function onLoadMoreClick() {
+    newsApiService.fetchArticles() 
+    .then(createMarkup)
+  
+  }
 
-}
 
-function createMarkup(articles) {  
-    const markup = articlesTpl(articles)
-    articlesContainerRef.insertAdjacentHTML('beforeend', markup)  
-}
+  function createMarkup(articles) {  
+        const markup = articlesTpl(articles)
+        articlesContainerRef.insertAdjacentHTML('beforeend', markup)  
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import NewsApi from './news-api';
+// import articlesTpl from './templates/articles.hbs'
+
+// const formRef = document.querySelector('.js-search-form');
+// const articlesContainerRef = document.querySelector('.js-articles-container');
+// const loadMoreBtn = document.querySelector('[data-action="load-more"]');
+
+// formRef.addEventListener('submit', onSearchForm);
+// loadMoreBtn.addEventListener('click', onLoadMoreClick);
+
+// const newsApiService = new NewsApi();
+
+// function onSearchForm(event) {
+//   event.preventDefault();
+//   const form = event.currentTarget;
+
+//   articlesContainerRef.innerHTML = '';
+//   newsApiService.resetPage()
+//   newsApiService.searchQuery = form.elements.query.value;
+
+//   newsApiService.fetchArticles() 
+//   .then(createMarkup)
+// }
+
+// function onLoadMoreClick() {
+//   newsApiService.increasePage();
+//   console.log(newsApiService);
+  
+//   newsApiService.fetchArticles()
+//   .then(createMarkup);
+
+// }
+
+// function createMarkup(articles) {  
+//     const markup = articlesTpl(articles)
+//     articlesContainerRef.insertAdjacentHTML('beforeend', markup)  
+// }
 
 
 // function fetchArticles() {
