@@ -10,16 +10,17 @@ const newMovie = {
   }
 
 
-const options = {
+
+
+
+function createMovie() {
+  const options = {
   method: 'POST',
   headers:{
     'Content-Type': 'application/json'
   },
   body: JSON.stringify(newMovie)
 }
-
-
-function createMovie() {
   return fetch(`${BASE_URL}/movies`, options)
   .then(r=>r.json())
 }
